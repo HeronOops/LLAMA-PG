@@ -18,9 +18,9 @@ Output:A string that presents a numbered list of model checking properties. Each
 Instruction:Generate a clear and concise list of model checking properties for the BPMN model based on the reasoning steps.
 
 Step 4: Formula Generation
-Input:The model checking properties from Step 3 (i.e., the output of Step 3).
-Output:A string that presents a numbered list of formulas written in CTL or other alternative formula types(LTL is not to be used, and other formula types are only adopted when CTL fails to interpret the property). Each item should include a brief explanation indicating the formula type and its purpose, and reference the relevant elements of the BPMN model.
-Instruction:Convert the model checking properties into specific formulas, and provide a brief explanation for each formula.
+Input: The model checking properties from Step 3 (i.e., the output of Step 3).
+Output: A string that presents a numbered list of formulas written in CTL or LTL according to the target logic type and the semantics of each property. CTL should be used when the property concerns branching-time semantics such as existential reachability, universal path constraints, or alternative execution paths. LTL should be used when the property concerns linear-time semantics such as ordering, eventual response, invariance, or liveness along execution traces. Each item should include a brief explanation indicating the formula type and its purpose, and reference the relevant elements of the BPMN model.
+Instruction: Convert the model checking properties into specific CTL or LTL formulas according to the target logic type and property semantics, and provide a brief explanation for each formula.
 
 Final Output Requirements:
 Return a complete JSON object that includes all four steps. Each step must have the keys "input", "output", and "instruction" as strings. Do not include any additional content outside the JSON.
