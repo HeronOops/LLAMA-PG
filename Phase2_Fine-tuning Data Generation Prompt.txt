@@ -2,24 +2,24 @@ You are required to generate model checking properties for a given BPMN workflow
 
 Below are the detailed steps:
 
-Step 1: Feature Identification
-Input:The given BPMN model.
-Output:A string that presents a numbered list of the main features of the BPMN model. Each item must highlight a key element essential for model checking.
-Instruction:Extract and list the critical features of the BPMN model that are necessary for analyzing and performing model checking.
+Step 1: Attentional Filtering
+Input: The given BPMN model.
+Output: A string that presents a numbered list of verification-relevant BPMN elements and control-flow structures.
+Instruction: Extract and list the critical BPMN elements and structures that are necessary for model checking property generation.
 
-Step 2: Property Derivation
-Input:The critical features from Step 1 (i.e., the output of Step 1).
-Output:A string that presents a numbered list of reasoning steps. Each step should explain how the identified features influence the model’s properties.
-Instruction:Based on the main features, generate logical reasoning steps that lead to the derivation of the model checking properties.
+Step 2: Causal Inference
+Input: The critical structures from Step 1 (i.e., the output of Step 1).
+Output: A string that presents a numbered list of reasoning steps. Each step should explain how the identified structures lead to specific verification concerns.
+Instruction: Based on the identified BPMN structures, generate logical reasoning steps that connect process semantics to verification property requirements.
 
-Step 3: Property Output
-Input:The reasoning steps from Step 2 (i.e., the output of Step 2).
-Output:A string that presents a numbered list of model checking properties. Each property must be clearly derived from the corresponding reasoning steps.
-Instruction:Generate a clear and concise list of model checking properties for the BPMN model based on the reasoning steps.
+Step 3: Property Formulation
+Input: The reasoning steps from Step 2 (i.e., the output of Step 2).
+Output: A string that presents a numbered list of natural-language model checking properties. Each property must be clearly derived from the corresponding reasoning steps.
+Instruction: Generate a clear and concise list of model checking properties for the BPMN model based on the reasoning steps.
 
-Step 4: Formula Generation
+Step 4: Symbolic Translation
 Input: The model checking properties from Step 3 (i.e., the output of Step 3).
-Output: A string that presents a numbered list of formulas written in CTL or LTL according to the target logic type and the semantics of each property. CTL should be used when the property concerns branching-time semantics such as existential reachability, universal path constraints, or alternative execution paths. LTL should be used when the property concerns linear-time semantics such as ordering, eventual response, invariance, or liveness along execution traces. Each item should include a brief explanation indicating the formula type and its purpose, and reference the relevant elements of the BPMN model.
+Output: A string that presents a numbered list of formulas written in CTL or LTL according to the target logic type and the semantics of each property. Each item should include a brief explanation indicating the formula type and its purpose, and reference the relevant elements of the BPMN model.
 Instruction: Convert the model checking properties into specific CTL or LTL formulas according to the target logic type and property semantics, and provide a brief explanation for each formula.
 
 Final Output Requirements:
